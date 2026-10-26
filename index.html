@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Проверка регулярных выражений</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Проверка регулярных выражений</h1>
+
+			<label for="expr">Выражение</label>
+			<input
+				id="expr"
+				type="text"
+				spellcheck="false"
+				autocomplete="off"
+				placeholder="a(b|c)*d"
+				value=""
+			/>
+
+			<label for="text">Строка</label>
+			<textarea id="text" rows="4" spellcheck="false" placeholder="xabcbdy abd"></textarea>
+
+			<button id="check" type="button">Проверить</button>
+
+			<p id="status" class="status" role="status"></p>
+			<pre id="result" aria-live="polite"></pre>
+		</main>
+
+		<script src="src\parser.js"></script>
+		<script src="src\matcher.js"></script>
+		<script src="src\main.js"></script>
+	</body>
+</html>
